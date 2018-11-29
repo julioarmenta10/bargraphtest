@@ -34,7 +34,9 @@ export class AppComponent {
     this.model={};
     console.log(this.listTask);
   }
-
+  getUrl(){
+    return "url('https://img.freepik.com/vector-gratis/fondo-concepto-tecnologia-malla-alambre-espacio-texto_1017-14622.jpg?size=626&ext=jpg')";
+  }
   calculo(Task){
     var canvas = <HTMLCanvasElement> document.getElementById("barChart");
     var ctx: CanvasRenderingContext2D = canvas.getContext("2d");

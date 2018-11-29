@@ -1,76 +1,7 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center" >
-  <h1>
-    Welcome to Bar Graph Test!
-  </h1>
-</div>
-
-<mat-grid-list cols="4">
-  <mat-grid-tile [colspan]="2" >
-    <button mat-raised-button color="primary" (click)="createTask()">Add Task</button>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="2" >
-    <button  mat-raised-button color="primary" (click)="taskList()">Task List</button>
-  </mat-grid-tile>
-</mat-grid-list>
-
-
-<div class="jumbotron" *ngIf="create">
-  <div class="container">
-      <div class="row">
-          <div class="col-md-6 offset-md-3">
-              <h3>Add Task</h3>
-              <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
-                  <div class="form-group">
-                      <label for="taskName">Task Name</label>
-                      <input type="text" class="form-control" name="taskName" [(ngModel)]="model.taskName" #taskName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && taskName.invalid }" required />
-                      <div *ngIf="f.submitted && taskName.invalid" class="invalid-feedback">
-                          <div *ngIf="taskName.errors.required">Task Name is required</div>
-                      </div>
-                  </div>
-                  <div class="form-group">
-                      <label for="description">Description</label>
-                      <input type="text" class="form-control" name="description" [(ngModel)]="model.description" #description="ngModel" [ngClass]="{ 'is-invalid': f.submitted && description.invalid }" required />
-                      <div *ngIf="f.submitted && description.invalid" class="invalid-feedback">
-                          <div *ngIf="description.errors.required">Description is required</div>
-                      </div>
-                  </div>
-                  <div class="form-group">
-                      <label for="time">Time</label>
-                      <input type="number" class="form-control" name="time" [(ngModel)]="model.time" #time="ngModel" [ngClass]="{ 'is-invalid': f.submitted && time.invalid }" required />
-                      <div *ngIf="f.submitted && time.invalid" class="invalid-feedback">
-                          <div *ngIf="time.errors.required">Time is required</div>
-                      </div>
-                  </div>
-            
-                  <div class="form-group">
-                      <button class="btn btn-primary">Add New Task</button>
-                  </div>
-              </form>
-          </div>
-      </div>
-  </div>
-</div>
-
-<div class="jumbotron" *ngIf="list">
-  <div class="container">
-      <h3>Tasks Lists</h3>
-      <h4 *ngIf="listTask.length==0">Not Have Tasks </h4>
-      <mat-selection-list #tasks>
-          <button class="btn btn-primary" style="color:white;" [disabled]="task.finish" mat-list-item (click)="calculo(task)" *ngFor="let task of listTask">
-                {{task.name}} -- {{task.description}}
-
-          </button>
-          <!-- <mat-list-option >
-          </mat-list-option> -->
-        </mat-selection-list>
-        
-        <canvas id="barChart" height="50"></canvas>
-
-  </div>
- 
+<div>
+    <router-outlet></router-outlet>
 
 </div>
 
 
-<router-outlet></router-outlet>
+      
