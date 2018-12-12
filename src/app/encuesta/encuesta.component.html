@@ -1,10 +1,12 @@
 <div class="container espacio">
   <h1>Responder las siguientes preguntas</h1>
+  <form (ngSubmit)="onSubmit()" [formGroup]="encuestaForm">                 
+
     <mat-list>
         <mat-list-item>
-            <label>Trabajar profesionalmente como parte de equipo en el desarrollo y evolución de productos de software, negociar y liderar cuando sea necesario y comunicarse efectivamente con los interesado.</label>
+            <label>1.- Trabajar profesionalmente como parte de equipo en el desarrollo y evolución de productos de software, negociar y liderar cuando sea necesario y comunicarse efectivamente con los interesado.</label>
             <br>
-            <mat-radio-group style="font-size: 14px;text-align: right;">
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q1">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
                 <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
@@ -16,9 +18,9 @@
         <br>
 
         <mat-list-item>
-            <label>Proyectar, construir, supervisar, operar y mantener obras hidraulicas, vias de comunicación y transporte, urbanas y edificación, saneamiento y medio ambiente.</label>
+            <label>2.- Proyectar, construir, supervisar, operar y mantener obras hidraulicas, vias de comunicación y transporte, urbanas y edificación, saneamiento y medio ambiente.</label>
             <br>
-            <mat-radio-group style="font-size: 14px;text-align: right;">
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q2">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
                 <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
@@ -29,9 +31,9 @@
         <mat-divider ></mat-divider>
         <br>
         <mat-list-item>
-            <label>Diseñar, establecer y evaluar redes geodésicas horizontales y verticales para la elaboración de planos topográficos, como apoyo para trabajos de construcción de diversas obras civiles.</label>
+            <label>3.- Diseñar, establecer y evaluar redes geodésicas horizontales y verticales para la elaboración de planos topográficos, como apoyo para trabajos de construcción de diversas obras civiles.</label>
             <br>
-            <mat-radio-group style="font-size: 14px;text-align: right;">
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q3">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
                 <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
@@ -41,10 +43,289 @@
         <br>
         <mat-divider ></mat-divider>
         <br>
+        <mat-list-item>
+                <label>4.- La selección, instalación y mantenimiento de equipos electrónicos y atumatizados.</label>
+                <br>
+                <mat-radio-group style="padding-left:70px;font-size: 14px;text-align: right;" formControlName="Q4">
+                    
+                    <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                    <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                    <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                </mat-radio-group>  
+            </mat-list-item>
+            <br>
+            <mat-divider ></mat-divider>
+            <br>
+
+                    <mat-list-item>
+            <label>5.- Analizar los procesos organizacionales para determinar las necesidades del cliente y traducirlos a requisitos de software.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q5">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+
+                <mat-list-item>
+            <label>6.- Realizar estudios de factibilidad técnicos-económicos de proyectos de obras civiles y seleccionar alternativas de anteproyectos y proyectos de obras civiles.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q6">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+
+                <mat-list-item>
+            <label>7.- Manipular, actualizar, analizar y diseñar sistemas de información geográficos para el desarrollo de catastros urbanos y rurales.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q7">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+
+                <mat-list-item>
+            <label>8.- La selección, desarrollo e innovación de máquinaria y procesos concernientes a las lineas de producción autmatizadas.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q8">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+
+      
+
+                <mat-list-item>
+            <label>9.- Administrar los recursos involucrados en el desarrollo de software, considerando compromisos con las limitaciones de costo, tiempo, conocimiento y sistemas existentes.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q9">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+               <mat-list-item>
+            <label>10.- Administrar empresas de construcciones civiles.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q10">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+               <mat-list-item>
+        <label>11.- Determinar dimensiones a diferentes escalas de espacios superficiales para solucionar problemas sociales, politicos y económicos.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q11">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+               <mat-list-item>
+            <label>12.- La administración eficiente de proceso de producción, comprendiendo la planeación, ejecución y control de sus diferentes etapas, apoyándose en su conocimiento de la tecnologia de vanguardia, en su conciencia ecológica, cultura del medio ambiente y responsabilidad social.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q12">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+        <mat-list-item>
+            <label>13.- Diseñar con equipos de trabajo soluciones en areas interdisciplinarias.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q13">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+        <mat-list-item>
+            <label>14.- Investigar y crear nuevas tecnologías acordes a nuestro medio.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q14">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+        <mat-list-item>
+            <label>15.- Poseer habilidades y destrezas en el uso y manejo de los diferentes instrumentos topográficos, geodesicos y astronómicos.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q15">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+        <mat-list-item>
+                <label>16.- Gestionar la producción a través de herramientas de la administración, para cumplir con los requerimientos del cliente.</label>
+                <br>
+                <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q16">
+                    
+                    <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                    <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                    <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                </mat-radio-group>  
+            </mat-list-item>
+            <br>
+            <mat-divider ></mat-divider>
+            <br>
+        <mat-list-item>
+            <label>17.- Entender y aplicar teorias, modelos y técnicas que provean una base para el diseño, desarrollo, verificación e implementación de software.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q17">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+        <mat-list-item>
+            <label>18.- Trabajar en equipos multidisciplinarios.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q18">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+        <mat-list-item>
+            <label>19.-Aplicar las matemáticas y la fisica en la comprensión de la teoria del area de la geodesia y emplearlos en la docencia e investigación.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q19">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+        <mat-list-item>
+            <label>20.- Administrar una cadena de suministro, a través de sistemas de logística, para garantizar la disposición de materiales y producto.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q20">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+        <mat-list-item>
+            <label>21.- Generar nuevas empresas de desarrollo de software con calidad de exportación mundial.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q21">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+        <mat-list-item>
+            <label>22.- Desarrollar proyectos de ingeniería que respondan a lo demandado por la sociedad y que influyan en un mejoramiento de la calidad de vida de las personas y la infrestructura del país.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q22">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+        <mat-list-item>
+            <label>23.- Trabajar en equipo multidisciplinario en la planeación, organización, dirección y ejecución de areas de la geodesia.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q23">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+        <br>
+        <mat-divider ></mat-divider>
+        <br>
+        <mat-list-item>
+            <label>24.- Gestionar los procesos de manufactura, a través de técnicas de administración de operaciones y aseguramiento de la calidad, para contribuir a la competitividad de la organización.</label>
+            <br>
+            <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q24">
+                
+                <mat-radio-button value="1">Me Gusta</mat-radio-button>
+                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+            </mat-radio-group>  
+        </mat-list-item>
+    
+     
       </mat-list>
       <div style="text-align: center;">
-          <button mat-raised-button color="primary" [routerLink]="['/encuesta']" type="submit"  style="width: 500px;">Finalizar Prueba</button>
+          <button mat-raised-button color="primary" [routerLink]="['/encuesta']" type="submit"  [disabled]="!encuestaForm.valid" style="width: 500px;">Finalizar Prueba</button>
 
       </div>
-
+  </form>
 </div>
