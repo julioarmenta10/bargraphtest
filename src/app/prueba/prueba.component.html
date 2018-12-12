@@ -1,0 +1,103 @@
+
+    <div class="container espacio">
+        <div class="row">
+            <div class="col-md-12 offset-md-3">
+                <h3>Datos Generales</h3>
+                <form name="form" (ngSubmit)="f.form.valid" #f="ngForm" novalidate>
+                   
+                    <mat-form-field class="form-group col-xs-6">
+                        <input matInput placeholder="Nombre(s)" [formControl]="nombreFormControl"  >
+                        <mat-error *ngIf="nombreFormControl.hasError('required')">
+                            Nombre <strong>requerido</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="form-group col-xs-6">
+                        <input matInput placeholder="Apellido(s)" [formControl]="apellidoFormControl">
+                        <mat-error *ngIf="apellidoFormControl.hasError('required')">
+                                Apellido <strong>requerido</strong>
+                            </mat-error>                     
+                    </mat-form-field>
+
+                    <mat-form-field class="form-group col-xs-6">
+                        <input matInput [matDatepicker]="picker" placeholder="Fecha de Nacimiento" [formControl]="fechaFormControl">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                        <mat-error *ngIf="fechaFormControl.hasError('required')">
+                                Fecha de Nacimiento <strong>requerida</strong>
+                            </mat-error> 
+                    </mat-form-field>
+                    <!-- <mat-form-field class="form-group col-xs-6">
+                        <input matInput placeholder="Fecha de Nacimiento">
+                    </mat-form-field>  -->
+                    <!-- <mat-radio-group class="form-group col-xs-6">
+                            <label>Genero</label>
+                            <br>
+                            <mat-radio-button value="M">Masculino</mat-radio-button>
+                            <mat-radio-button value="F">Femenino</mat-radio-button>
+                        </mat-radio-group>   -->
+
+                    <!-- <mat-form-field class="form-group col-xs-6">
+                        
+                        <input matInput placeholder="Genero">
+                    </mat-form-field> -->
+                    <mat-form-field class="form-group col-xs-6">
+                        <mat-select placeholder="Genero" [formControl]="generoFormControl">
+                            <mat-option value="M">Masculino</mat-option>
+                            <mat-option value="F">Femenino</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="generoFormControl.hasError('required')">
+                                Genero <strong>requerido</strong>
+                            </mat-error> 
+                    </mat-form-field>
+
+
+                    <mat-form-field class="form-group col-xs-6">
+                        <mat-select placeholder="Carrera (actual o deseada)" [formControl]="carreraFormControl">
+                            <mat-option value="software">Ingenieria de Software</mat-option>
+                            <mat-option value="civil">Ingenieria Civil</mat-option>
+                            <mat-option value="geodesia">Ingenieria Geodesia</mat-option>
+
+                        </mat-select>
+                        <mat-error *ngIf="carreraFormControl.hasError('required')">
+                                Carrera <strong>requerida</strong>
+                            </mat-error> 
+                    </mat-form-field>
+
+                    <!-- <mat-form-field class="form-group col-xs-6">
+                            <input matInput placeholder="Carrera (actual o deseada)">
+                    </mat-form-field> -->
+
+                    <mat-form-field class="form-group col-xs-6">
+                            <input matInput type="number" placeholder="Promedio Anterior" [formControl]="promedioFormControl">
+                            <mat-error *ngIf="promedioFormControl.hasError('required')">
+                                    Promedio <strong>requerido</strong>
+                                </mat-error> 
+                    </mat-form-field>
+
+                    <mat-radio-group class="form-group col-xs-6">
+                        <label>Grupo</label>
+                        <br>
+                        <mat-radio-button value="1">01</mat-radio-button>
+                        <mat-radio-button value="2">02</mat-radio-button>
+                        <mat-radio-button value="3">03</mat-radio-button>
+                        <mat-radio-button value="4">04</mat-radio-button>
+                        <mat-radio-button value="5">05</mat-radio-button>
+                    </mat-radio-group>  
+                    
+                    <mat-form-field class="form-group col-xs-6">
+                        <input matInput placeholder="Año">
+                    </mat-form-field>
+           
+                
+
+                    <div class="form-group" style="text-align: center;">
+                            <button mat-stroked-button color="warn" [routerLink]="['/encuesta']" type="submit"  style="width: 500px;">Iniciar Prueba</button>
+
+                        <!-- <button class="btn btn-primary">Iniciar Prueba</button> -->
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>

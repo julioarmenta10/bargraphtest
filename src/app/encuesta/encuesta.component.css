@@ -1,0 +1,9 @@
+.espacio{
+    padding:50px;
+    margin-top:40px;
+    background-color: rgb(254,254,254,0.8);
+  }
+
+  mat-radio-button{
+    margin-left: 2px;
+  }

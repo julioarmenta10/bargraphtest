@@ -1,0 +1,19 @@
+
+  .titulo {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border: none;
+    font: normal 43px/normal Arial Black, Gadget, sans-serif;
+    color: rgba(254,214,144,1);
+    text-align: center;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    letter-spacing: 7px;
+  }
+  .espacio{
+    text-align: center;
+    margin: 100px;
+    padding:80px;
+    background-color: rgb(0,0,0,0.4);
+  }
