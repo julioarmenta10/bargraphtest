@@ -1,7 +1,15 @@
 <div class="container espacio">
   <h1>Responder las siguientes preguntas</h1>
   <form (ngSubmit)="onSubmit()" [formGroup]="encuestaForm">                 
-
+        <mat-form-field class="form-group" style="width: 78vw;">
+                <mat-select placeholder="CONSIDERA QUE SU PERFIL ES CIENTIFICO - TECNICO" formControlName="perfil">
+                        <mat-option value="2">TOTALMENTE DE ACUERDO</mat-option>
+                        <mat-option value="1">DE ACUERDO</mat-option>
+                        <mat-option value="0">INDECISO</mat-option>
+                        <mat-option value="-1">EN DESACUERDO</mat-option>
+                        <mat-option value="-2">TOTALMENTE EN DESACUERDO</mat-option>
+                </mat-select>
+            </mat-form-field>
     <mat-list>
         <mat-list-item>
             <label>1.- Trabajar profesionalmente como parte de equipo en el desarrollo y evolución de productos de software, negociar y liderar cuando sea necesario y comunicarse efectivamente con los interesado.</label>
@@ -9,8 +17,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q1">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -23,8 +31,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q2">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -36,8 +44,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q3">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -49,8 +57,8 @@
                 <mat-radio-group style="padding-left:70px;font-size: 14px;text-align: right;" formControlName="Q4">
                     
                     <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                    <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                    <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                    <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                    <mat-radio-button value="-1">Me desagrada</mat-radio-button>
                 </mat-radio-group>  
             </mat-list-item>
             <br>
@@ -63,8 +71,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q5">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -77,8 +85,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q6">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -91,8 +99,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q7">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -105,8 +113,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q8">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -121,8 +129,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q9">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -134,8 +142,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q10">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -147,8 +155,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q11">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -160,8 +168,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q12">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -173,8 +181,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q13">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -186,8 +194,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q14">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -199,8 +207,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q15">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -212,8 +220,8 @@
                 <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q16">
                     
                     <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                    <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                    <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                    <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                    <mat-radio-button value="-1">Me desagrada</mat-radio-button>
                 </mat-radio-group>  
             </mat-list-item>
             <br>
@@ -225,8 +233,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q17">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -238,8 +246,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q18">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -251,8 +259,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q19">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -264,8 +272,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q20">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -277,8 +285,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q21">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -290,8 +298,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q22">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -303,8 +311,8 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q23">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
         <br>
@@ -316,13 +324,38 @@
             <mat-radio-group style="font-size: 14px;text-align: right;" formControlName="Q24">
                 
                 <mat-radio-button value="1">Me Gusta</mat-radio-button>
-                <mat-radio-button value="2">Me es Indiferente / Desconozco</mat-radio-button>
-                <mat-radio-button value="3">Me desagrada</mat-radio-button>
+                <mat-radio-button value="0">Me es Indiferente / Desconozco</mat-radio-button>
+                <mat-radio-button value="-1">Me desagrada</mat-radio-button>
             </mat-radio-group>  
         </mat-list-item>
     
      
       </mat-list>
+
+      <mat-form-field class="form-group" style="width: 78vw;" >
+            <mat-select placeholder="CALIFICACION DEL 1 AL 10 DE LA UNIVERSIDAD" formControlName="score">
+                <mat-option value="10">10</mat-option>
+                <mat-option value="9">9</mat-option>
+                <mat-option value="8">8</mat-option>
+                <mat-option value="7">7</mat-option>
+                <mat-option value="6">6</mat-option>
+                <mat-option value="5">5</mat-option>
+                <mat-option value="4">4</mat-option>
+                <mat-option value="3">3</mat-option>
+                <mat-option value="2">2</mat-option>
+                <mat-option value="1">1</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-group" style="width: 78vw;">
+                <mat-select placeholder="RECOMIENDA ESTUDIAR EN LA FACULTAD DE INGENIERIA MOCHIS DE LA UAS" formControlName="recomendacion">
+                    <mat-option value="2">TOTALMENTE DE ACUERDO</mat-option>
+                    <mat-option value="1">DE ACUERDO</mat-option>
+                    <mat-option value="0">INDECISO</mat-option>
+                    <mat-option value="-1">EN DESACUERDO</mat-option>
+                    <mat-option value="-2">TOTALMENTE EN DESACUERDO</mat-option>
+                </mat-select>
+            </mat-form-field>
       <div style="text-align: center;">
           <button mat-raised-button color="primary" [routerLink]="['/encuesta']" type="submit"  [disabled]="!encuestaForm.valid" style="width: 500px;">Finalizar Prueba</button>
 

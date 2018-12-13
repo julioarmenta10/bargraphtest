@@ -16,6 +16,7 @@ export class EncuestaComponent implements OnInit {
 
   ngOnInit() {
     this.encuestaForm=this.pf.group({
+      perfil:['',Validators.required],
       Q1:['',Validators.required],
       Q2:['',Validators.required],
       Q3:['',Validators.required],
@@ -39,7 +40,10 @@ export class EncuestaComponent implements OnInit {
       Q21:['',Validators.required],
       Q22:['',Validators.required],
       Q23:['',Validators.required],
-      Q24:['',Validators.required]     
+      Q24:['',Validators.required],
+      score:['',Validators.required],
+      recomendacion:['',Validators.required]     
+   
 
     });
   }
@@ -56,30 +60,33 @@ export class EncuestaComponent implements OnInit {
   }
   saveEncuesta(){
     const saveEncuesta ={
-      Q1:this.encuestaForm.get('Q1').value,
-      Q2:this.encuestaForm.get('Q2').value,
-      Q3:this.encuestaForm.get('Q3').value,
-      Q4:this.encuestaForm.get('Q4').value,
-      Q5:this.encuestaForm.get('Q5').value,
-      Q6:this.encuestaForm.get('Q6').value,
-      Q7:this.encuestaForm.get('Q7').value,
-      Q8:this.encuestaForm.get('Q8').value,
-      Q9:this.encuestaForm.get('Q9').value,
-      Q10:this.encuestaForm.get('Q10').value,
-      Q11:this.encuestaForm.get('Q11').value,
-      Q12:this.encuestaForm.get('Q12').value,
-      Q13:this.encuestaForm.get('Q13').value,
-      Q14:this.encuestaForm.get('Q14').value,
-      Q15:this.encuestaForm.get('Q15').value,
-      Q16:this.encuestaForm.get('Q16').value,
-      Q17:this.encuestaForm.get('Q17').value,
-      Q18:this.encuestaForm.get('Q18').value,
-      Q19:this.encuestaForm.get('Q19').value,
-      Q20:this.encuestaForm.get('Q20').value,
-      Q21:this.encuestaForm.get('Q21').value,
-      Q22:this.encuestaForm.get('Q22').value,
-      Q23:this.encuestaForm.get('Q23').value,
-      Q24:this.encuestaForm.get('Q24').value
+      perfil:parseInt(this.encuestaForm.get('perfil').value),
+      Q1:parseInt(this.encuestaForm.get('Q1').value),
+      Q2:parseInt(this.encuestaForm.get('Q2').value),
+      Q3:parseInt(this.encuestaForm.get('Q3').value),
+      Q4:parseInt(this.encuestaForm.get('Q4').value),
+      Q5:parseInt(this.encuestaForm.get('Q5').value),
+      Q6:parseInt(this.encuestaForm.get('Q6').value),
+      Q7:parseInt(this.encuestaForm.get('Q7').value),
+      Q8:parseInt(this.encuestaForm.get('Q8').value),
+      Q9:parseInt(this.encuestaForm.get('Q9').value),
+      Q10:parseInt(this.encuestaForm.get('Q10').value),
+      Q11:parseInt(this.encuestaForm.get('Q11').value),
+      Q12:parseInt(this.encuestaForm.get('Q12').value),
+      Q13:parseInt(this.encuestaForm.get('Q13').value),
+      Q14:parseInt(this.encuestaForm.get('Q14').value),
+      Q15:parseInt(this.encuestaForm.get('Q15').value),
+      Q16:parseInt(this.encuestaForm.get('Q16').value),
+      Q17:parseInt(this.encuestaForm.get('Q17').value),
+      Q18:parseInt(this.encuestaForm.get('Q18').value),
+      Q19:parseInt(this.encuestaForm.get('Q19').value),
+      Q20:parseInt(this.encuestaForm.get('Q20').value),
+      Q21:parseInt(this.encuestaForm.get('Q21').value),
+      Q22:parseInt(this.encuestaForm.get('Q22').value),
+      Q23:parseInt(this.encuestaForm.get('Q23').value),
+      Q24:parseInt(this.encuestaForm.get('Q24').value),
+      score:parseInt(this.encuestaForm.get('score').value),
+      recomendacion:parseInt(this.encuestaForm.get('recomendacion').value)
     }
     return saveEncuesta;
       }
